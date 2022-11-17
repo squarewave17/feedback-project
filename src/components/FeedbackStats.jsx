@@ -1,4 +1,8 @@
-function FeedbackStats({feedback}) {
+import {useContext} from "react"
+import FeedbackContext from "../context/FeedbackContext"
+
+function FeedbackStats() {
+  const {feedback} = useContext(FeedbackContext)
   //Caclutate ratings average
   let average =
     feedback.reduce((acc, current) => {
